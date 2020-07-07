@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CDN link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
     <!-- Bootstrap link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
@@ -13,84 +17,45 @@
 </head>
 
 <body>
-    <!-- Header -->
-    <header>
-        <nav class="navbar bg-dark">
-            <h1 class="text-white">Weather Dashboard</h1>
-        </nav>
+    <header class="bg-dark text-white text-center p-2 mb-2">
+        <h1>Weather Dashboard</h1>
     </header>
 
     <main>
-        <!-- Column 1 -->
-        <div class="row">
-            <div class="col-3">
-                <!-- Search Bar -->
-                <form>
-                    <div class="form-group">
-                        <label for="city-search">Search for a city:</label>
-                        <input type="search" class="form-control" id="city-search" name="city-search" placeholder="Search">
+       <div class="container">
+           <div class="row">
+               <!-- Search Bar -->
+               <div class="col-sm-3">
+                    <form>
+                        <div class="form-group">
+                            <label for="city-search">Search for a City:</label>
+                            <input type="search" class="form-control" id="city-search" placeholder="City, State">
+                            <button class="btn btn-primary my-sm-0" type="submit" id="search-btn">Search</button>
+                        </div>
+                    </form>
+                    <!-- Search History-->
+                    <div id="search-history">
+                        <h3>Search History</h3>
                     </div>
-                
-                </form>
-                <!-- Search History -->
-            </div>
-
-            <!-- Column 2 -->
-            <div class="col-9">
-                <!-- Display results of search for current day & Implement Cards to display 5-day forecast-->
-                <form>
-                    <div class="row">
-                        
-                    </div>
-                </form>
-                <!-- Implement Cards to display 5-day forecast-->
-                <div class="row">
-                    <div class="col-12">
+               </div>
+               <div class="row">
+                    <div class="col-sm-12">
+                        <!-- Current Day Forecast -->
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">09/01/2020</h5>
-                                <h6 class="card-subtitle">emoji</h6>
-                                <h6 class="card-subtitle">temp</h6>
-                                <h6 class="card-subtitle">humidity</h6>
+                                <h2 id="featured-city">Featured City</h2>
+                                <div id=city-info>Weather Info</div>
                             </div>
                         </div>
-                        
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">09/02/2020</h5>
-                                <h6 class="card-subtitle">emoji</h6>
-                                <h6 class="card-subtitle">temp</h6>
-                                <h6 class="card-subtitle">humidity</h6>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">09/03/2020</h5>
-                                <h6 class="card-subtitle">emoji</h6>
-                                <h6 class="card-subtitle">temp</h6>
-                                <h6 class="card-subtitle">humidity</h6>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">09/04/2020</h5>
-                                <h6 class="card-subtitle">emoji</h6>
-                                <h6 class="card-subtitle">temp</h6>
-                                <h6 class="card-subtitle">humidity</h6>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">09/05/2020</h5>
-                                <h6 class="card-subtitle">emoji</h6>
-                                <h6 class="card-subtitle">temp</h6>
-                                <h6 class="card-subtitle">humidity</h6>
-                            </div>
+                        <!-- 5-day Forecast-->
+                        <div class="col-12" id="5day-forecast">
+                            <h3>5-Day Forecast: </h3>
+                            <div class="card-deck" id="forecast-cards"></div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+           </div>
+       </div>
     </main>
 
     <script src="./assets/js/script.js"></script>
