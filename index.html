@@ -28,8 +28,9 @@
                <div class="col-sm-3">
                     <form>
                         <div class="form-group">
-                            <label for="city-search">Search for a City:</label>
-                            <input type="search" class="form-control" id="city-search" placeholder="City, State">
+                            <!--label for="city-search">Search for a City:</label -->
+                            
+                            <input type="text" class="form-control" id="city-search" placeholder="City, State">
                             <button class="btn btn-primary my-sm-0" type="submit" id="search-btn">Search</button>
                         </div>
                     </form>
@@ -38,15 +39,14 @@
                         <h3>Search History</h3>
                     </div>
                </div>
+               <div class ="card-text">
+
+                
+               </div>
                <div class="row">
                     <div class="col-sm-12">
                         <!-- Current Day Forecast -->
-                        <div class="card">
-                            <div class="card-body">
-                                <h2 id="featured-city">Featured City</h2>
-                                <div id=city-info>Weather Info</div>
-                            </div>
-                        </div>
+                        <div class="card" id="today"></div>
                         <!-- 5-day Forecast-->
                         <div class="col-12" id="5day-forecast">
                             <h3>5-Day Forecast: </h3>
@@ -58,6 +58,8 @@
        </div>
     </main>
 
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
