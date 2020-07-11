@@ -32,13 +32,17 @@ function searchWeather(city) {
       );
 
       titleEl.appendChild(imgEl);
-      todayEl.appendChild(cardEl);
+      //todayEl.appendChild(cardEl);
     });
 }
 
-//currentDday function
+//for current day
+//create div, which has elements and classes for temp and humidity
+//append child to make it show up
+//take todayEl and append the card to todayEl
 
-//5day function
+//uv index and 5day forecast
+//fetch request, get new data, wipe current content, then repalce with new content
 
 //event listeners
 document.querySelector("#search-btn").addEventListener("click", searchCity);
